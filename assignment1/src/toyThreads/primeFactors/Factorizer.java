@@ -21,24 +21,26 @@ public class Factorizer implements Runnable {
       endValue = end;
     }
 
-    public void run() {
+    public void run()
+    {
 
-	    // no need to catch InterruptedException as there is no Threads.sleep(100) call here;
+      // no need to catch InterruptedException as there is no Threads.sleep(100) call here;
 
-	    if (Debug.DEBUG_VALUE > 5) {
-		// the toString(...) method will be called to print "this"
-		System.out.println("Work started by factorizer thread: " + this);
-	    }
+      if (Debug.DEBUG_VALUE > 5) {
+    // the toString(...) method will be called to print "this"
+        System.out.println("Work started by factorizer thread: " + this);
+      }
 
-	    // FIXME: check for factors from startValue to endValue for numberToFactorize
-	    // FIXME: if a factor is found, add it the ArrayList in the Results class
+      // FIXME: check for factors from startValue to endValue for numberToFactorize
+      // FIXME: if a factor is found, add it the ArrayList in the Results class
 
     } // end run(...)
 
     public String toString() {
-	String objectState = null;
-	// FIXME: add all the data members to a String, and return that string
-	return objectState;
+  String objectState = "myID = " + myID + "\nNumber im working on is " + numberToFactorize +
+      "\nStarting value " + startValue + "\nEnd value " + endValue;
+  // FIXME: add all the data members to a String, and return that string
+  return objectState;
     }
 
 } // end class WorkerThread
