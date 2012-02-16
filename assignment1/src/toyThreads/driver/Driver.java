@@ -2,6 +2,7 @@
 package toyThreads.driver;
 
 import toyThreads.primeFactors.Factorizer;
+import java.lang.Thread;
 import toyThreads.util.Debug;
 import toyThreads.primeFactors.Results;
 
@@ -33,6 +34,16 @@ public class Driver {
 
 
   // FIXME: create numberOfThreads and to each thread pass an instance of Factorizer as argument
+  int start = 0;
+  int end = primeToTest / numberOfThreads;
+  for(int threadNum = 0; threadNum < numberOfThreads; threadNum++)
+  {
+    if(threadNum == numberOfThreads - 1)
+      end = primeToTest;
+    new Thread(new Factorizer(threadNum, primeToTest, start , end)).start();
+    start = end;
+    end += end;
+  }
 
   try {
       // FIXME: wait for the threads to get done
