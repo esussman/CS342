@@ -11,8 +11,15 @@ public class Factorizer implements Runnable {
     private int startValue;
     private int endValue;
 
-    
+
     // FIXME: define an explicit value constructor that initializes all the data members
+    public Factorizer(int id, int factNum, int start, int end)
+    {
+      myID = id;
+      numberToFactorize = factNum;
+      startValue = start;
+      endValue = end;
+    }
 
     public void run() {
 
@@ -22,7 +29,7 @@ public class Factorizer implements Runnable {
 		// the toString(...) method will be called to print "this"
 		System.out.println("Work started by factorizer thread: " + this);
 	    }
-	    
+
 	    // FIXME: check for factors from startValue to endValue for numberToFactorize
 	    // FIXME: if a factor is found, add it the ArrayList in the Results class
 
