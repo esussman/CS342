@@ -34,21 +34,21 @@ public class Driver {
 
 
   // FIXME: create numberOfThreads and to each thread pass an instance of Factorizer as argument
-  int start = 0;
+  int start = 1;
   int end = primeToTest / numberOfThreads;
   for(int threadNum = 0; threadNum < numberOfThreads; threadNum++)
   {
     if(threadNum == numberOfThreads - 1)
       end = primeToTest;
     new Thread(new Factorizer(threadNum, primeToTest, start , end)).start();
-    start = end;
+    start = end + 1;
     end += end;
   }
 
   try {
       // FIXME: wait for the threads to get done
       // adjust this sleep duration as needed
-      Thread.sleep(10);
+      Thread.sleep(100);
   } catch (InterruptedException ie) {
       // interruption of the main thread is fatal, so exit
       ie.printStackTrace();
