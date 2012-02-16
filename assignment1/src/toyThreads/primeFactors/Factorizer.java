@@ -33,7 +33,11 @@ public class Factorizer implements Runnable {
 
       // FIXME: check for factors from startValue to endValue for numberToFactorize
       // FIXME: if a factor is found, add it the ArrayList in the Results class
-
+      for(int start = startValue; start <= endValue; start++)
+      {
+        if(numberToFactorize % start == 0)
+          System.out.println("myID: " + myID + " factor: " + start + "\n");
+      }
     } // end run(...)
 
     public String toString() {
