@@ -18,6 +18,7 @@ public class Driver {
       primeToTest= Integer.parseInt(args[0]);
       numberOfThreads = Integer.parseInt(args[1]);
       debugValue = Integer.parseInt(args[2]);
+      verifyInputs(primeToTest, numberOfThreads, debugValue);
   } catch (NumberFormatException e) {
       System.err.println("All arguments must be integers");
       System.exit(1);
@@ -55,6 +56,23 @@ public class Driver {
     System.out.println("Prime number is " + primeNum);
     System.out.println("Number of threads to run is " + numThreads);
     System.out.println("Debug value is " + debugVal);
+  }
+  private static void verifyInputs(int primeToTest, int numberOfThreads, int debugValue)
+  {
+    if(primeToTest < 1){
+     System.err.println("Please enter a positive number to be factored");
+     System.exit(1);
+    }
+    if(numberOfThreads > 5 || numberOfThreads < 1)
+    {
+     System.err.println("The number of threads must be between 1 and 5");
+     System.exit(1);
+    }
+    if(debugValue > 10 || debugValue < 5)
+    {
+     System.err.println("The debug value must be between 5 and 10");
+     System.exit(1);
+    }
   }
 }
 
