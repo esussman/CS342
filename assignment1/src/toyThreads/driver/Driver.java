@@ -32,15 +32,16 @@ public class Driver {
     if(debugValue >= 2)
       printArguments(primeToTest, numberOfThreads, debugValue);
 
-
   // FIXME: create numberOfThreads and to each thread pass an instance of Factorizer as argument
   int start = 1;
   int end = primeToTest / numberOfThreads;
+  Thread[] threads = new Thread[numberOfThreads];
   for(int threadNum = 0; threadNum < numberOfThreads; threadNum++)
   {
     if(threadNum == numberOfThreads - 1)
       end = primeToTest;
-    new Thread(new Factorizer(threadNum, primeToTest, start , end)).start();
+    threads[threadNum] = new Thread(new Factorizer(threadNum, primeToTest, start , end));
+    threads[threadNum].start();
     start = end + 1;
     end += end;
   }
@@ -48,13 +49,16 @@ public class Driver {
   try {
       // FIXME: wait for the threads to get done
       // adjust this sleep duration as needed
-      Thread.sleep(100);
+      for(int i = 0; i < numberOfThreads; i++)
+      {
+        threads[i].join();
+      }
+      //Thread.sleep(100);
   } catch (InterruptedException ie) {
       // interruption of the main thread is fatal, so exit
       ie.printStackTrace();
       System.exit(-1);
   }
-
   // FIXME; print the factors using the printFactors() method
         // of the Results class
 
