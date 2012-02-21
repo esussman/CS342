@@ -76,10 +76,18 @@ public class Driver {
   }
   private static void verifyInputs(int primeToTest, int numberOfThreads, int debugValue)
   {
-     Debug.dprint("Please enter a positive number to be factored", debugValue);
-     Debug.dprint("The number of threads must be between 1 and 5", debugValue);
-     Debug.dprint("The debug value must be between 5 and 10", debugValue);
-     System.exit(1);
+     if(primeToTest < 1){
+       System.err.println("Please enter a positive number to be factored");
+       System.exit(1);
+      }
+    if(numberOfThreads > 5 || numberOfThreads < 1){
+      System.err.println("The number of threads must be between 1 and 5");
+      System.exit(1);
+    }
+    if(debugValue > 10 || debugValue < 5){
+      System.err.println("The debug value must be between 5 and 10");
+      System.exit(1);
+    }
   }
 }
 
