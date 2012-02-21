@@ -24,13 +24,15 @@ public class Driver {
       System.err.println("All arguments must be integers");
       System.exit(1);
   }
+  finally
+  {
+  }
 
   // FIXME: set the DEBUG_VALUE in Debug.java
-    Debug.DEBUG_VALUE = debugValue;
+  Debug.DEBUG_VALUE = debugValue;
   // FIXME:
   // if DEBUG_LEVEL is greater than 2, print all the argument received
-    if(debugValue >= 2)
-      printArguments(primeToTest, numberOfThreads, debugValue);
+  printArguments(primeToTest, numberOfThreads, debugValue);
 
   // FIXME: create numberOfThreads and to each thread pass an instance of Factorizer as argument
   int start = 1;
@@ -68,26 +70,16 @@ public class Driver {
     } // end main(...)
   private static void printArguments(int primeNum, int numThreads, int debugVal)
   {
-    System.out.println("Prime number is " + primeNum);
-    System.out.println("Number of threads to run is " + numThreads);
-    System.out.println("Debug value is " + debugVal);
+    String message = "Prime number is " + primeNum +
+      "\nNumber of threads to run is " + numThreads + "\nDebug value is " + debugVal;
+    Debug.dprint(message, debugVal);
   }
   private static void verifyInputs(int primeToTest, int numberOfThreads, int debugValue)
   {
-    if(primeToTest < 1){
-     System.err.println("Please enter a positive number to be factored");
+     Debug.dprint("Please enter a positive number to be factored", debugValue);
+     Debug.dprint("The number of threads must be between 1 and 5", debugValue);
+     Debug.dprint("The debug value must be between 5 and 10", debugValue);
      System.exit(1);
-    }
-    if(numberOfThreads > 5 || numberOfThreads < 1)
-    {
-     System.err.println("The number of threads must be between 1 and 5");
-     System.exit(1);
-    }
-    if(debugValue > 10 || debugValue < 5)
-    {
-     System.err.println("The debug value must be between 5 and 10");
-     System.exit(1);
-    }
   }
 }
 
