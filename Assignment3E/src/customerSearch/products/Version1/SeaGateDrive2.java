@@ -2,14 +2,8 @@ package customerSearch.products.Version1;
 
 import java.util.ArrayList;
 
-
-public class SeaGateDrive2
+public class SeaGateDrive2 extends SeaGateDriveV1
 {
-  ArrayList description;
-  void accept()
-  {
-
-  }
   SeaGateDrive2()
   {
     description = new ArrayList();
