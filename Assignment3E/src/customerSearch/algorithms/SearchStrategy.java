@@ -1,4 +1,4 @@
-public interface SearchStrategy.java
+public interface SearchStrategy
 {
   public void search();
 }
