@@ -1,0 +1,3 @@
+CPU:processor
+RAM:memory
+HDD:hard drive

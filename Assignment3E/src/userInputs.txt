@@ -1,5 +1,9 @@
-What type of processor is needed
-How much memory do I need
-How fast must my bus be
-How much cache does the hard drive have
-How fast is the processor
+processor needed
+memory needed
+bus speed
+cache
+warranty
+windows
+macintosh
+linux
+portable
