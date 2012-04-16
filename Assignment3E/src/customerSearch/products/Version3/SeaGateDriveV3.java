@@ -11,7 +11,7 @@ public abstract class SeaGateDriveV3
   {
     return description;
   }
-  void accept(ProductVisitor visitor)
+  public void accept(ProductVisitor visitor)
   {
     visitor.visit(this);
   }
