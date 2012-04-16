@@ -2,8 +2,8 @@ package customerSearch.algorithms;
 
 public class ExactMatch implements SearchStrategy
 {
-  public void search()
+  public void search(String searchStr)
   {
-
+	  
   }
 }

@@ -2,5 +2,5 @@ package customerSearch.algorithms;
 
 public interface SearchStrategy
 {
-  public void search();
+  public void search(String searchStr);
 }
