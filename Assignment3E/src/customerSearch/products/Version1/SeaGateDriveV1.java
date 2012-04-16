@@ -6,10 +6,14 @@ import customerSearch.util.ProductVisitor;
 
 public abstract class SeaGateDriveV1
 {
-  ArrayList description;
+  ArrayList<String> description;
+  public ArrayList<String> getDescription()
+  {
+    return description;
+  }
   void accept(ProductVisitor visitor)
   {
-
+    visitor.visit(this);
   }
 }
 
