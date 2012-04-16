@@ -1,6 +1,8 @@
 package customerSearch.algorithms;
 
+import java.util.ArrayList;
+
 public interface SearchStrategy
 {
-  public void search(String needle, String haystack);
+  public void search(ArrayList<String> description);
 }
