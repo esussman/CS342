@@ -1,0 +1,2 @@
+A dual core processor is needed to enable feature X on the hard drive.
+A minumum of 128 MB of memory needed to run feature X on hard drive.
