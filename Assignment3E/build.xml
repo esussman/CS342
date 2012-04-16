@@ -1,5 +1,5 @@
 
-<project name="toyThreads" default="compile" basedir=".">
+<project name="customerSearch" default="compile" basedir=".">
 
   <property name="build.compiler"              value="modern"/>
   <property name="src"                  value="src"/>
@@ -8,7 +8,7 @@
 
 
   <target name="compile"
-          depends="toyThreads"/>
+          depends="customerSearch"/>
 
   <target name="clean">
        <delete dir="${BUILD}"/>
@@ -25,9 +25,9 @@
   <!-- * means all files in the current directory -->
   <!-- for just java files use *.java -->
 
-  <target name="toyThreads" depends="prepare">
+  <target name="customerSearch" depends="prepare">
     <javac srcdir="${src}"
-           includes="toyThreads/**"
+           includes="customerSearch/**"
            excludes="**/package.html"
            destdir="${classes}"
            classpath="${classes}"
@@ -39,19 +39,17 @@
 
  <target name="jar">
         <mkdir dir="${BUILD}/jar"/>
-        <jar destfile="${BUILD}/jar/toyThreads.jar" basedir="${BUILD}/classes">
+        <jar destfile="${BUILD}/jar/customerSearch.jar" basedir="${BUILD}/classes">
             <manifest>
-                <attribute name="Main-Class" value="toyThreads.driver.Driver"/>
+                <attribute name="Main-Class" value="customerSearch.driver.Driver"/>
             </manifest>
         </jar>
     </target>
 
 
 <target name="run" depends="jar">
-        <java jar="${BUILD}/jar/toyThreads.jar"  fork="true">
+        <java jar="${BUILD}/jar/CustomerSearcb.jar"  fork="true">
 	  <arg value="123457491"/>
-          <arg value="4"/>
-          <arg value="3"/>
 	 </java>
 
     </target>

@@ -1,9 +1,0 @@
-processor needed
-memory needed
-bus speed
-cache
-warranty
-windows
-macintosh
-linux
-portable
