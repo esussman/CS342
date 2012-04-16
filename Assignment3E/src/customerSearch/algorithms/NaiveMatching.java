@@ -29,7 +29,6 @@ public class NaiveMatching implements SearchStrategy
   }
   public void search(ArrayList<String> description)
   {
-
     ArrayList<String> result = new ArrayList<String>();
     for(String first: searchStrings)
       result.add(first.split(" ")[0]);
@@ -42,12 +41,6 @@ public class NaiveMatching implements SearchStrategy
           System.out.println(sentence);
       }
     }
-		// if(haystack.indexOf(result[0]) != -1)
-		// {
-			// System.out.println(haystack);
-		// }
-
-
   }
 }
 

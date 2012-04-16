@@ -29,7 +29,6 @@ public class ExactMatch implements SearchStrategy
   }
   public void search(ArrayList<String> description)
   {
-
     for (String search: searchStrings)
     {
       for(String sentence: description)
@@ -38,11 +37,5 @@ public class ExactMatch implements SearchStrategy
           System.out.println(sentence);
       }
     }
-    /*
-    if(haystack.indexOf(needle) != -1 )
-    {
-      System.out.println(haystack);
-    }
-    */
   }
 }
