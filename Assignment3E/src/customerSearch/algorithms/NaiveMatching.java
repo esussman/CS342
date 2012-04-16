@@ -13,7 +13,7 @@ public class NaiveMatching implements SearchStrategy
     searchStrings = new ArrayList<String>();
     Scanner userInput;
     try {
-      userInput = new Scanner(new File(".\\userInputs.txt"));
+      userInput = new Scanner(new File("userInputs.txt"));
           while (userInput.hasNextLine()) {
             searchStrings.add(userInput.nextLine());
           }
@@ -30,11 +30,18 @@ public class NaiveMatching implements SearchStrategy
   public void search(ArrayList<String> description)
   {
 
-		// String result[] = needle.split(" ");
+    ArrayList<String> result = new ArrayList<String>();
+    for(String first: searchStrings)
+      result.add(first.split(" ")[0]);
 
-		// //Debug
-		// //System.out.println(result[0]);
-
+    for (String search: result)
+    {
+      for(String sentence: description)
+      {
+        if(sentence.indexOf(search) != -1)
+          System.out.println(sentence);
+      }
+    }
 		// if(haystack.indexOf(result[0]) != -1)
 		// {
 			// System.out.println(haystack);

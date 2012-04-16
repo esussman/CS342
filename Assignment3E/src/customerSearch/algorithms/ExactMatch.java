@@ -13,7 +13,7 @@ public class ExactMatch implements SearchStrategy
     searchStrings = new ArrayList<String>();
     Scanner userInput;
     try {
-      userInput = new Scanner(new File(".\\userInputs.txt"));
+      userInput = new Scanner(new File("userInputs.txt"));
           while (userInput.hasNextLine()) {
             searchStrings.add(userInput.nextLine());
           }
@@ -30,6 +30,14 @@ public class ExactMatch implements SearchStrategy
   public void search(ArrayList<String> description)
   {
 
+    for (String search: searchStrings)
+    {
+      for(String sentence: description)
+      {
+        if(sentence.indexOf(search) != -1)
+          System.out.println(sentence);
+      }
+    }
     /*
     if(haystack.indexOf(needle) != -1 )
     {
