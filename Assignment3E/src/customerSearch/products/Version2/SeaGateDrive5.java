@@ -12,8 +12,8 @@ public class SeaGateDrive5 extends SeaGateDriveV2
   {
     description = new ArrayList();
     Scanner descriptionInput;
-    String path = ".\\" + FileEnums.Product5.getCode();
-    System.out.println("THIS IS THE PATH   " + path);
+    String path = "src/customerSearch/util/productDescriptions/" + FileEnums.Product5.getCode();
+
     try {
       descriptionInput = new Scanner(new File(path));
           while (descriptionInput.hasNextLine()) {
