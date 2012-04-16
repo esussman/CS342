@@ -3,6 +3,7 @@ package customerSearch.driver;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import customerSearch.algorithms.SearchStrategy;
@@ -16,13 +17,14 @@ class Driver
 	public static void main(String[] args)
 	{
 		
-	    Scanner userInput;
+	    Scanner userInputScan;
+	    ArrayList<String> userInput = new ArrayList<String>();
 		try {
-			userInput = new Scanner(new File(".\\userInputs.txt"));
+			userInputScan = new Scanner(new File(".\\userInputs.txt"));
 			
-		      while (userInput.hasNextLine()) {
+		      while (userInputScan.hasNextLine()) {
 		    	  
-		    	  System.out.println(userInput.nextLine());
+		    	  userInput.add(userInputScan.nextLine());
 		      }
 		}
 		catch (FileNotFoundException e) {
@@ -37,7 +39,7 @@ class Driver
 		
 		SearchStrategy test = new SemanticMatch();
 		
-		//test.search("problem detecting the drive", "If Windows 7 has a problem detecting the drive, it could be that the portable drive is not receiving enough power.");
+		test.search("processor", "If Windows 7 has a processor problem");
 		
 		//ArrayList userInput = new ArrayList();
 		
