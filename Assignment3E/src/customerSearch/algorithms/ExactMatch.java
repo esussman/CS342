@@ -6,5 +6,10 @@ public class ExactMatch implements SearchStrategy
   {
 	
 	  
+	  if(haystack.indexOf(needle) != -1 )
+	  {
+		  System.out.println(haystack);
+	  }
+	  
   }
 }

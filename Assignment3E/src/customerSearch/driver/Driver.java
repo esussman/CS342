@@ -3,9 +3,10 @@ package customerSearch.driver;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Scanner;
+
+import customerSearch.algorithms.SearchStrategy;
+import customerSearch.algorithms.SemanticMatch;
 
 class Driver
 {
@@ -34,6 +35,9 @@ class Driver
 		}
 
 		
+		SearchStrategy test = new SemanticMatch();
+		
+		//test.search("problem detecting the drive", "If Windows 7 has a problem detecting the drive, it could be that the portable drive is not receiving enough power.");
 		
 		//ArrayList userInput = new ArrayList();
 		
