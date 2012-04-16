@@ -1,0 +1,28 @@
+processor needed
+memory needed
+bus speed
+cache
+warranty
+windows XP
+Windows Vista
+Windows 7
+macintosh
+MacOSX
+linux
+Ubuntu linux
+portable HDD
+compatibility
+USB 2.0
+USB 3.0
+Firewire
+Thunderbolt
+SATA 3
+SATA 2
+IDE
+RPM
+CPU
+HDD
+FAT
+NTFS
+Format
+Software
