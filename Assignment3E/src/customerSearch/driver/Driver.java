@@ -29,6 +29,11 @@ class Driver
   public static void main(String[] args)
   {
     int debug_value = 0;
+    if(args.length != 1)
+    {
+      System.err.println("Bad number of arguments");
+      System.exit(-1);
+    }
     try
     {
       debug_value = Integer.parseInt(args[0]);
