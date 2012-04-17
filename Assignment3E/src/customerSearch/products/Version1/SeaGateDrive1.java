@@ -10,7 +10,7 @@ public class SeaGateDrive1 extends SeaGateDriveV1
 {
   public SeaGateDrive1()
   {
-    description = new ArrayList();
+	description = new ArrayList<String>();
     Scanner descriptionInput;
     String path = "src/customerSearch/util/productDescriptions/" + FileEnums.Product1.getCode();
 //    System.out.println("THIS IS THE PATH   " + path);

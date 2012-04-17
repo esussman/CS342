@@ -8,9 +8,9 @@ import customerSearch.util.FileEnums;
 
 public class SeaGateDrive5 extends SeaGateDriveV2
 {
-  SeaGateDrive5()
+  public SeaGateDrive5()
   {
-    description = new ArrayList();
+	description = new ArrayList<String>();
     Scanner descriptionInput;
     String path = "src/customerSearch/util/productDescriptions/" + FileEnums.Product5.getCode();
 

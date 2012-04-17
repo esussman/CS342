@@ -8,9 +8,9 @@ import java.util.ArrayList;
 
 public class SeaGateDrive6 extends SeaGateDriveV2
 {
-  SeaGateDrive6()
+  public SeaGateDrive6()
   {
-    description = new ArrayList();
+	description = new ArrayList<String>();
     Scanner descriptionInput;
     String path = "src/customerSearch/util/productDescriptions/" + FileEnums.Product6.getCode();
 
