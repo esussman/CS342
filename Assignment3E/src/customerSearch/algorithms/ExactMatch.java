@@ -33,13 +33,9 @@ public class ExactMatch implements SearchStrategy
     {
       for(String sentence: description)
       {
-    	  String[] splitSentence = sentence.split(" ");
-    	  
-    	  for(String word: splitSentence)
-    	  {
-    	      if(word.compareToIgnoreCase(search) == 0)
-    	          System.out.println(sentence);
-    	  }
+
+    	  if(sentence.indexOf(search) != -1)
+    	       System.out.println(sentence);
 
       }
     }

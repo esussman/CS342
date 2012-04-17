@@ -51,7 +51,37 @@ class Driver
 		//Visitor
 		ProductVisitor visitor = new CompleteSearchVisitor();
 		
+		System.out.println("Version 1");
+		System.out.println("Drive 1");
 		sg1.accept(visitor);
+		System.out.println("Drive 2");
+		sg2.accept(visitor);
+		System.out.println("Drive 3");
+		sg3.accept(visitor);
+		
+		System.out.println("Version 2");
+		System.out.println("Drive 4");
+		sg4.accept(visitor);
+		System.out.println("Drive 5");
+		sg5.accept(visitor);
+		System.out.println("Drive 6");
+		sg6.accept(visitor);
+		
+		System.out.println("Version 3");
+		System.out.println("Drive 7");
+		sg7.accept(visitor);
+		System.out.println("Drive 8");
+		sg8.accept(visitor);
+		System.out.println("Drive 9");
+		sg9.accept(visitor);
+		
+		System.out.println("Version 4");
+		System.out.println("Drive 10");
+		sg10.accept(visitor);
+		System.out.println("Drive 11");
+		sg11.accept(visitor);
+		System.out.println("Drive 12");
+		sg12.accept(visitor);
 	}
 	
 	

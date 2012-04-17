@@ -35,6 +35,7 @@ public class NaiveMatching implements SearchStrategy
 
     for (String search: result)
     {
+   
       for(String sentence: description)
       {
     	  String[] splitSentence = sentence.split(" ");
