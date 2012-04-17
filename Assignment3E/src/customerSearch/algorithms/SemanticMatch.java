@@ -96,9 +96,8 @@ public class SemanticMatch implements SearchStrategy
 
 
     }
-  }
-
     Debug.dprint("Exiting Semantic Match Search", 4);
-
+  }
 }
+
 
