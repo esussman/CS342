@@ -5,12 +5,14 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import customerSearch.products.Version2.SeaGateDriveV2;
+import customerSearch.util.Debug;
 import customerSearch.util.FileEnums;
 
 public class SeaGateDrive8 extends SeaGateDriveV3
 {
   public SeaGateDrive8()
   {
+  Debug.dprint("Inside " + this.getClass().getName() + " constructor.", 2);
 	description = new ArrayList<String>();
     Scanner descriptionInput;
     String path = "src/customerSearch/util/productDescriptions/" + FileEnums.Product8.getCode();
