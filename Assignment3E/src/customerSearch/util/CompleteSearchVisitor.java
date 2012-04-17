@@ -5,7 +5,7 @@ import customerSearch.algorithms.ExactMatch;
 import customerSearch.algorithms.NaiveMatching;
 import customerSearch.algorithms.SearchStrategy;
 import customerSearch.algorithms.SemanticMatch;
-import customerSearch.products.Version3.SeaGateDriveV1;
+import customerSearch.products.Version1.SeaGateDriveV1;
 import customerSearch.products.Version2.SeaGateDriveV2;
 import customerSearch.products.Version3.SeaGateDriveV3;
 import customerSearch.products.Version4.SeaGateDriveV4;
@@ -13,7 +13,7 @@ import customerSearch.util.Debug;
 
 public class CompleteSearchVisitor implements ProductVisitor
 {
-  public void visit(SeaGateDriveV3 drive)
+  public void visit(SeaGateDriveV1 drive)
   {
     Debug.dprint("Exact Match", 3);
     SearchStrategy exactMatch = new ExactMatch();
