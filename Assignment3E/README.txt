@@ -25,28 +25,27 @@ PARTS THAT ARE NOT COMPLETE:
 
 BUGS:
 
-[
-  Document here the bugs in your program that you are aware but have no idea
-  why they exist, NOT the ones you solved. For example "For some reason, I
-  cannot seem to send 4 bytes of data in a package, but when I increase the
-  package to 8 bytes, then everything works correctly". Don't try to be
-  creative here, if you do not see any bugs, say "None".
-]
+None.
 
 FILES:
 
-[
-  Document here a list of the files that are necessary for the project to run.
-  Here is a sample:
-
-  Included with this project are 5 files:
-
-  BinaryNode.java, the file which does the binary tree
-  Tree.java, the file responsible for the printing and basics of the tree
-  Project3.java, the main file associated with the program also contains main
-  File.txt, the file that contains the data to be printed on the tree
-  README, the text file you are presently reading
-]
+	SearchStrategy.java, contains interface for all search strategies.
+	ExactMatch.java, contains an Exact Match search algorithm. Extends SearchStrategy.
+	NativeMatching.java, contains a Native Match search algorithm. Extends SearchStrategy.
+	SemanticMatch.java, contains a Semantic Match search algorithm. Extends SearchStrategy.
+	Driver.java, contains driver code.
+	SeaGateDrive[1-3].java, contain implementations of a V1 hard drive model.
+	SeaGateDrive[4-6].java, contain implementations of a V2 hard drive model.
+	SeaGateDrive[7-9].java, contain implementations of a V3 hard drive model.
+	SeaGateDrive[10-12].java, contain implementations of a V4 hard drive model.
+	ProductVistor.java, contains interface for creating product visitors.
+	CompleteSearchVisitor.java, contains implementation of a visitor for all drives with all 3 searches. Implements ProductVisitor.java 
+	Debug.java, defines debug number.
+	FileEnums.java, defines names of text files that describe the hard drives.
+	products[1-12].txt contain product descriptions.
+	README.txt, the file that you're reading right now
+	synonyms.txt, file that contains synonyms
+	userInputs.txt,file that emulates multiple input made by a user
 
 SAMPLE OUTPUT:
 
