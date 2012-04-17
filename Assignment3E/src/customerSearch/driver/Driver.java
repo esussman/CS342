@@ -66,36 +66,36 @@ class Driver
     //Visitor
     ProductVisitor visitor = new CompleteSearchVisitor();
 
-    System.out.println("Version 1");
-    System.out.println("Drive 1");
+    Debug.dprint("Version 1", 1);
+    Debug.dprint("Drive 1", 1);
     sg1.accept(visitor);
-    System.out.println("Drive 2");
+    Debug.dprint("Drive 2", 1);
     sg2.accept(visitor);
-    System.out.println("Drive 3");
+    Debug.dprint("Drive 3", 1);
     sg3.accept(visitor);
 
-    System.out.println("Version 2");
-    System.out.println("Drive 4");
+    Debug.dprint("Version 2", 1);
+    Debug.dprint("Drive 4" , 1);
     sg4.accept(visitor);
-    System.out.println("Drive 5");
+    Debug.dprint("Drive 5", 1);
     sg5.accept(visitor);
-    System.out.println("Drive 6");
+    Debug.dprint("Drive 6", 1);
     sg6.accept(visitor);
 
-    System.out.println("Version 3");
-    System.out.println("Drive 7");
+    Debug.dprint("Version 3", 1);
+    Debug.dprint("Drive 7", 1);
     sg7.accept(visitor);
-    System.out.println("Drive 8");
+    Debug.dprint("Drive 8", 1);
     sg8.accept(visitor);
-    System.out.println("Drive 9");
+    Debug.dprint("Drive 9", 1);
     sg9.accept(visitor);
 
-    System.out.println("Version 4");
-    System.out.println("Drive 10");
+    Debug.dprint("Version 4", 1);
+    Debug.dprint("Drive 10", 1);
     sg10.accept(visitor);
-    System.out.println("Drive 11");
+    Debug.dprint("Drive 11", 1);
     sg11.accept(visitor);
-    System.out.println("Drive 12");
+    Debug.dprint("Drive 12", 1);
     sg12.accept(visitor);
   }
 
