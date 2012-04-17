@@ -76,26 +76,21 @@ public class SemanticMatch implements SearchStrategy
     //inside the hashmap
     for(String keyword : result)
     {
-      
+ 
     	if(synonyms.containsKey(keyword))
     	{
     		//If it does, we search the description
     		//of the object with the value matching the key found
     		for(String sentence : description)
     		{
-    			  //Split the sentence to match full word
-    			  //And to avoid false matching composite words
-    			  String[] splitSentence = sentence.split(" ");
-    			
-    	    	  for(String word: splitSentence)
-    	    	  {
-    	    		  
-    	    		  if(word.compareToIgnoreCase(synonyms.get(keyword)) == 0)
+ 
+    			if(sentence.indexOf(synonyms.get(keyword)) != -1)
     	    	          System.out.println(sentence);
-    	    	  }
+    	    	  
     		}
     		
-    	}
+    	
+  	}
     		
 
     }
