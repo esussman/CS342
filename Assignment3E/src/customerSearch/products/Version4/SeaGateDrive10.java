@@ -1,11 +1,13 @@
-package customerSearch.products.Version3;
+package customerSearch.products.Version4;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+
+import customerSearch.products.Version3.SeaGateDriveV3;
 import customerSearch.util.FileEnums;
 import java.util.ArrayList;
 
-public class SeaGateDrive10 extends SeaGateDriveV3
+public class SeaGateDrive10 extends SeaGateDriveV4
 {
   SeaGateDrive10()
   {

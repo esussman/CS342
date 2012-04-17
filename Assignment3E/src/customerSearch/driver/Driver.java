@@ -17,31 +17,12 @@ class Driver
 	public static void main(String[] args)
 	{
 		
-	    Scanner userInputScan;
-	    ArrayList<String> userInput = new ArrayList<String>();
-		try {
-			userInputScan = new Scanner(new File(".\\userInputs.txt"));
-			
-		      while (userInputScan.hasNextLine()) {
-		    	  
-		    	  userInput.add(userInputScan.nextLine());
-		      }
-		}
-		catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		//V1
+		SeaGateDrive1 sg1 = new SeaGateDrive1();
+		SeaGateDrive1 sg1 = new SeaGateDrive1();
+		SeaGateDrive1 sg1 = new SeaGateDrive1();
+		SeaGateDrive1 sg1 = new SeaGateDrive1();
 		
-		finally{
-			
-		}
-
-		
-		SearchStrategy test = new SemanticMatch();
-		
-		test.search("processor", "If Windows 7 has a processor problem");
-		
-		//ArrayList userInput = new ArrayList();
 		
 	}
 	

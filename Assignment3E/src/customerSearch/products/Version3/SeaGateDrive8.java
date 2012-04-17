@@ -1,18 +1,19 @@
-package customerSearch.products.Version2;
-
+package customerSearch.products.Version3;
+import java.util.ArrayList;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-import customerSearch.util.FileEnums;
-import java.util.ArrayList;
 
-public class SeaGateDrive7 extends SeaGateDriveV2
+import customerSearch.products.Version2.SeaGateDriveV2;
+import customerSearch.util.FileEnums;
+
+public class SeaGateDrive8 extends SeaGateDriveV3
 {
-  SeaGateDrive7()
+  SeaGateDrive8()
   {
     description = new ArrayList();
     Scanner descriptionInput;
-    String path = "src/customerSearch/util/productDescriptions/" + FileEnums.Product7.getCode();
+    String path = "src/customerSearch/util/productDescriptions/" + FileEnums.Product8.getCode();
 
     try {
       descriptionInput = new Scanner(new File(path));
@@ -28,7 +29,6 @@ public class SeaGateDrive7 extends SeaGateDriveV2
     finally{
 
     }
-
   }
 }
 

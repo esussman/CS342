@@ -8,6 +8,7 @@ import customerSearch.algorithms.SemanticMatch;
 import customerSearch.products.Version1.SeaGateDriveV1;
 import customerSearch.products.Version2.SeaGateDriveV2;
 import customerSearch.products.Version3.SeaGateDriveV3;
+import customerSearch.products.Version4.SeaGateDriveV4;
 
 public class CompleteSearchVisitor implements ProductVisitor
 {
@@ -47,4 +48,16 @@ public class CompleteSearchVisitor implements ProductVisitor
     SearchStrategy semanticMatch = new SemanticMatch();
      semanticMatch.search(drive.getDescription());
   }
+  public void visit(SeaGateDriveV4 drive)
+  {
+    SearchStrategy exactMatch = new ExactMatch();
+     exactMatch.search(drive.getDescription());
+
+    SearchStrategy naiveMatch = new NaiveMatching();
+     naiveMatch.search(drive.getDescription());
+
+    SearchStrategy semanticMatch = new SemanticMatch();
+     semanticMatch.search(drive.getDescription());
+  }
 }
+
