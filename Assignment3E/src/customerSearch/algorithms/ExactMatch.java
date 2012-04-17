@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import customerSearch.util.Debug;
 
 public class ExactMatch implements SearchStrategy
 {
@@ -35,7 +36,7 @@ public class ExactMatch implements SearchStrategy
       {
 
     	  if(sentence.indexOf(search) != -1)
-    	       System.out.println(sentence);
+            Debug.dprint(sentence, 1);
 
       }
     }

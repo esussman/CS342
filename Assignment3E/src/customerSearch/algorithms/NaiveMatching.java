@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.ArrayList;
+import customerSearch.util.Debug;
 
 public class NaiveMatching implements SearchStrategy
 {
@@ -35,15 +36,15 @@ public class NaiveMatching implements SearchStrategy
 
     for (String search: result)
     {
-   
+
       for(String sentence: description)
       {
     	  String[] splitSentence = sentence.split(" ");
-    	  
+
     	  for(String word: splitSentence)
     	  {
     	      if(word.compareToIgnoreCase(search) == 0)
-    	          System.out.println(sentence);
+              Debug.dprint(sentence, 1);
     	  }
       }
     }

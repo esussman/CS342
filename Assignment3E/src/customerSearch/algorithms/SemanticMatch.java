@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Scanner;
+import customerSearch.util.Debug;
 
 public class SemanticMatch implements SearchStrategy
 {
@@ -62,7 +63,7 @@ public class SemanticMatch implements SearchStrategy
   {
 
     ArrayList<String> result = new ArrayList<String>();
-    
+
     //Gets the last word from each sentence
     //and puts it into an array list
     for(String first: searchStrings)
@@ -70,28 +71,28 @@ public class SemanticMatch implements SearchStrategy
     	String[] split = first.split(" ");
         result.add(split[split.length-1]);
     }
-    
+
     //Takes every last word found found
     //and checks if it exists as a key
     //inside the hashmap
     for(String keyword : result)
     {
- 
+
     	if(synonyms.containsKey(keyword))
     	{
     		//If it does, we search the description
     		//of the object with the value matching the key found
     		for(String sentence : description)
     		{
- 
+
     			if(sentence.indexOf(synonyms.get(keyword)) != -1)
-    	    	          System.out.println(sentence);
-    	    	  
+    	    	          Debug.dprint(sentence, 1);
+
     		}
-    		
-    	
+
+
   	}
-    		
+
 
     }
   }
