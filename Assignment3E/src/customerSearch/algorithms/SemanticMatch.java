@@ -61,6 +61,7 @@ public class SemanticMatch implements SearchStrategy
 
   public  void search(ArrayList<String> description)
   {
+    Debug.dprint("Entering Semantic Match Search", 4);
 
     ArrayList<String> result = new ArrayList<String>();
 
@@ -97,6 +98,7 @@ public class SemanticMatch implements SearchStrategy
     }
   }
 
+    Debug.dprint("Exiting Semantic Match Search", 4);
 
 }
 

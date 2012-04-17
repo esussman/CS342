@@ -30,6 +30,7 @@ public class ExactMatch implements SearchStrategy
   }
   public void search(ArrayList<String> description)
   {
+    Debug.dprint("Entering ExactMatch Search", 4);
     for (String search: searchStrings)
     {
       for(String sentence: description)
@@ -40,5 +41,6 @@ public class ExactMatch implements SearchStrategy
 
       }
     }
+    Debug.dprint("Exiting ExactMatch Search", 4);
   }
 }

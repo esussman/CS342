@@ -30,6 +30,7 @@ public class NaiveMatching implements SearchStrategy
   }
   public void search(ArrayList<String> description)
   {
+    Debug.dprint("Entering Naive Match Search", 4);
     ArrayList<String> result = new ArrayList<String>();
     for(String first: searchStrings)
       result.add(first.split(" ")[0]);
@@ -48,6 +49,7 @@ public class NaiveMatching implements SearchStrategy
     	  }
       }
     }
+    Debug.dprint("Exiting Naive Match Search", 4);
   }
 }
 
