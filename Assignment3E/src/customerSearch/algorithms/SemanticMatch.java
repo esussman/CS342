@@ -62,18 +62,42 @@ public class SemanticMatch implements SearchStrategy
   {
 
     ArrayList<String> result = new ArrayList<String>();
+    
+    //Gets the last word from each sentence
+    //and puts it into an array list
     for(String first: searchStrings)
     {
-      String splitSpace[] = first.split(":");
-      String keyword = splitSpace[splitSpace.length-1];
-      if(synonyms.containsKey(keyword))
-      {
-        for(String sentence: description)
-        {
-          if(sentence.indexOf(synonyms.get(keyword)) != -1)
-            System.out.println(sentence);
-        }
-      }
+    	String[] split = first.split(" ");
+        result.add(split[split.length-1]);
+    }
+    
+    //Takes every last word found found
+    //and checks if it exists as a key
+    //inside the hashmap
+    for(String keyword : result)
+    {
+      
+    	if(synonyms.containsKey(keyword))
+    	{
+    		//If it does, we search the description
+    		//of the object with the value matching the key found
+    		for(String sentence : description)
+    		{
+    			  //Split the sentence to match full word
+    			  //And to avoid false matching composite words
+    			  String[] splitSentence = sentence.split(" ");
+    			
+    	    	  for(String word: splitSentence)
+    	    	  {
+    	    		  
+    	    		  if(word.compareToIgnoreCase(synonyms.get(keyword)) == 0)
+    	    	          System.out.println(sentence);
+    	    	  }
+    		}
+    		
+    	}
+    		
+
     }
   }
 
