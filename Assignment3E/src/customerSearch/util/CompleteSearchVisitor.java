@@ -9,62 +9,70 @@ import customerSearch.products.Version1.SeaGateDriveV1;
 import customerSearch.products.Version2.SeaGateDriveV2;
 import customerSearch.products.Version3.SeaGateDriveV3;
 import customerSearch.products.Version4.SeaGateDriveV4;
+import customerSearch.util.Debug;
 
 public class CompleteSearchVisitor implements ProductVisitor
 {
   public void visit(SeaGateDriveV1 drive)
   {
-    System.out.println("Exact Match");
+    Debug.dprint("Exact Match", 1);
     SearchStrategy exactMatch = new ExactMatch();
     exactMatch.search(drive.getDescription());
 
-    System.out.println("Naive Match");
+    Debug.dprint("Naive Match", 1);
     SearchStrategy naiveMatch = new NaiveMatching();
      naiveMatch.search(drive.getDescription());
 
-    System.out.println("Semantic Match");
+    Debug.dprint("Semantic Match", 1);
+
     SearchStrategy semanticMatch = new SemanticMatch();
-     semanticMatch.search(drive.getDescription());
+    semanticMatch.search(drive.getDescription());
   }
   public void visit(SeaGateDriveV2 drive)
   {
-    System.out.println("Exact Match");
+    Debug.dprint("Exact Match", 1);
     SearchStrategy exactMatch = new ExactMatch();
     exactMatch.search(drive.getDescription());
 
-    System.out.println("Naive Match");
+    Debug.dprint("Naive Match", 1);
+
     SearchStrategy naiveMatch = new NaiveMatching();
      naiveMatch.search(drive.getDescription());
 
-    System.out.println("Semantic Match");
+    Debug.dprint("Semantic Match", 1);
+
     SearchStrategy semanticMatch = new SemanticMatch();
      semanticMatch.search(drive.getDescription());
   }
   public void visit(SeaGateDriveV3 drive)
   {
-    System.out.println("Exact Match");
+    Debug.dprint("Exact Match", 1);
     SearchStrategy exactMatch = new ExactMatch();
     exactMatch.search(drive.getDescription());
 
-    System.out.println("Naive Match");
+    Debug.dprint("Naive Match", 1);
+
     SearchStrategy naiveMatch = new NaiveMatching();
      naiveMatch.search(drive.getDescription());
 
-    System.out.println("Semantic Match");
+    Debug.dprint("Semantic Match", 1);
+
     SearchStrategy semanticMatch = new SemanticMatch();
      semanticMatch.search(drive.getDescription());
   }
   public void visit(SeaGateDriveV4 drive)
   {
-    System.out.println("Exact Match");
+    Debug.dprint("Exact Match", 1);
     SearchStrategy exactMatch = new ExactMatch();
     exactMatch.search(drive.getDescription());
 
-    System.out.println("Naive Match");
+    Debug.dprint("Naive Match", 1);
+
     SearchStrategy naiveMatch = new NaiveMatching();
      naiveMatch.search(drive.getDescription());
 
-    System.out.println("Semantic Match");
+    Debug.dprint("Semantic Match", 1);
+
     SearchStrategy semanticMatch = new SemanticMatch();
      semanticMatch.search(drive.getDescription());
   }
