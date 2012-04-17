@@ -1,28 +1,27 @@
-processor needed
-memory needed
-bus speed
-cache
-warranty
-windows XP
-Windows Vista
-Windows 7
-macintosh
-MacOSX
-linux
-Ubuntu linux
-portable HDD
-compatibility
-USB 2.0
-USB 3.0
-Firewire
-Thunderbolt
+processor is needed
+memory is needed
+Microsoft Windows XP
+Microsoft Windows Vista
+lifetime warranty
+64MB cache
+Thunderbolt interface
+Firewire interface
 SATA 3
-SATA 2
-IDE
+portable HDD
+Mac OSX
+Ubuntu linux
+bus speed
+USB interface
+interface compatibility
+power usage
 RPM
+USB
+16GB RAM
+format FAT
+interface IDE
+64GB HDD
 CPU
-HDD
-FAT
-NTFS
-Format
 Software
+NY RANGERS
+long island islanders
+Ottawa Senators Binghamton Farm

@@ -1,2 +1,2 @@
-This product has support for Thunderbolt.
-This product has support for Firewire.
+This product has support for Thunderbolt interface.
+This product has support for Firewire interface.

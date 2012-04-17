@@ -1,0 +1,2 @@
+This product has a speed rating of 7200 rotations per minute.
+This product is compatible with the universal serial bus specification.

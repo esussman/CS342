@@ -1,1 +1,2 @@
-This product is incompatible with Windows Vista.
+This product is SATA III compatible.
+This product is a 128GB portable drive.
