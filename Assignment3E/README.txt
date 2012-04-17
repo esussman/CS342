@@ -30,9 +30,9 @@ None.
 FILES:
 
 	SearchStrategy.java, contains interface for all search strategies.
-	ExactMatch.java, contains an Exact Match search algorithm. Extends SearchStrategy.
-	NativeMatching.java, contains a Native Match search algorithm. Extends SearchStrategy.
-	SemanticMatch.java, contains a Semantic Match search algorithm. Extends SearchStrategy.
+	ExactMatchStrategy.java, contains an Exact Match search algorithm. Extends SearchStrategy.
+	NativeMatchStrategy.java, contains a Native Match search algorithm. Extends SearchStrategy.
+	SemanticMatchStrategy.java, contains a Semantic Match search algorithm. Extends SearchStrategy.
 	Driver.java, contains driver code.
 	SeaGateDrive[1-3].java, contain implementations of a V1 hard drive model.
 	SeaGateDrive[4-6].java, contain implementations of a V2 hard drive model.

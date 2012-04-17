@@ -1,15 +1,15 @@
 package customerSearch.algorithms;
 
+import java.util.ArrayList;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-import java.util.ArrayList;
 import customerSearch.util.Debug;
 
-public class NaiveMatching implements SearchStrategy
+public class ExactMatchStrategy implements SearchStrategy
 {
   ArrayList<String> searchStrings;
-  public NaiveMatching()
+  public ExactMatchStrategy()
   {
     searchStrings = new ArrayList<String>();
     Scanner userInput;
@@ -30,26 +30,17 @@ public class NaiveMatching implements SearchStrategy
   }
   public void search(ArrayList<String> description)
   {
-    Debug.dprint("Entering Naive Match Search", 4);
-    ArrayList<String> result = new ArrayList<String>();
-    for(String first: searchStrings)
-      result.add(first.split(" ")[0]);
-
-    for (String search: result)
+    Debug.dprint("Entering ExactMatch Search", 4);
+    for (String search: searchStrings)
     {
-
       for(String sentence: description)
       {
-    	  String[] splitSentence = sentence.split(" ");
 
-    	  for(String word: splitSentence)
-    	  {
-    	      if(word.compareToIgnoreCase(search) == 0)
-              Debug.dprint(sentence, 1);
-    	  }
+    	  if(sentence.indexOf(search) != -1)
+            Debug.dprint(sentence, 1);
+
       }
     }
-    Debug.dprint("Exiting Naive Match Search", 4);
+    Debug.dprint("Exiting ExactMatch Search", 4);
   }
 }
-

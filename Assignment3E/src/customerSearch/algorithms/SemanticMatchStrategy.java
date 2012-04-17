@@ -7,11 +7,11 @@ import java.util.HashMap;
 import java.util.Scanner;
 import customerSearch.util.Debug;
 
-public class SemanticMatch implements SearchStrategy
+public class SemanticMatchStrategy implements SearchStrategy
 {
   HashMap<String, String> synonyms;
   ArrayList<String> searchStrings;
-  public SemanticMatch()
+  public SemanticMatchStrategy()
   {
     searchStrings = new ArrayList<String>();
     Scanner synonymScanner;
