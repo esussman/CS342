@@ -1,2 +1,0 @@
-This product is not compatible with the SCSI interface
-This product uses 8W of power

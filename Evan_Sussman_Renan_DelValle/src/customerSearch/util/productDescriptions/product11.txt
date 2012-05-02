@@ -1,0 +1,2 @@
+This device does not support the Integrated Drive Electronics interface.
+This product is a 74GB Hard Drive Disk.

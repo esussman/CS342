@@ -1,2 +1,0 @@
-This product requires the motherboard to have a bus of at least 1GB/s.
-The USB speeds of this devices top out at 300MB/s.

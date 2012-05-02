@@ -49,7 +49,7 @@
 
 <target name="run" depends="jar">
         <java jar="${BUILD}/jar/CustomerSearch.jar"  fork="true">
-	  <arg value="123457491"/>
+	  <arg value="1"/>
 	 </java>
 
     </target>

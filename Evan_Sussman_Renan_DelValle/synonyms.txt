@@ -1,0 +1,8 @@
+RPM:rotations per minute
+USB:universal serial bus
+RAM:random access memory
+FAT:File Allocation Table
+IDE:Integrated Drive Electronics
+HDD:Hard Drive Disk
+CPU:central processing unit
+Software:application
