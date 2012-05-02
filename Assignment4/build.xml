@@ -1,0 +1,58 @@
+
+<project name="customerSearch" default="compile" basedir=".">
+
+  <property name="build.compiler"              value="modern"/>
+  <property name="src"                  value="src"/>
+  <property name="BUILD"                value="build"/>
+  <property name="classes"              value="${BUILD}/classes"/>
+
+
+  <target name="compile"
+          depends="customerSearch"/>
+
+  <target name="clean">
+       <delete dir="${BUILD}"/>
+  </target>
+
+  <!-- Prepare target directories -->
+  <target name="prepare">
+        <mkdir dir="${BUILD}"/>
+        <mkdir dir="${classes}"/>
+  </target>
+
+
+  <!-- ** means all subdirectories as well -->
+  <!-- * means all files in the current directory -->
+  <!-- for just java files use *.java -->
+
+  <target name="customerSearch" depends="prepare">
+    <javac srcdir="${src}"
+           includes="customerSearch/**"
+           excludes="**/package.html"
+           destdir="${classes}"
+           classpath="${classes}"
+           includeantruntime="false"
+           debug="on"
+           optimize="on"
+           deprecation="off"/>
+  </target>
+
+ <target name="jar">
+        <mkdir dir="${BUILD}/jar"/>
+        <jar destfile="${BUILD}/jar/customerSearch.jar" basedir="${BUILD}/classes">
+            <manifest>
+                <attribute name="Main-Class" value="customerSearch.driver.Driver"/>
+            </manifest>
+        </jar>
+    </target>
+
+
+<target name="run" depends="jar">
+        <java jar="${BUILD}/jar/CustomerSearch.jar"  fork="true">
+	  <arg value="1"/>
+	 </java>
+
+    </target>
+
+
+</project>
