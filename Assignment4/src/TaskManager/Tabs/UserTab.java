@@ -4,7 +4,7 @@ import TaskManager.tabs.Tab;
 import java.util.Observable;
 import java.util.Observer;
 
-class User extends Tab implements Observer
+public class UserTab extends Tab
 {
   public void update(Observable obs, Object x) {
       System.out.println("update(" + obs + "," + x + ");");
