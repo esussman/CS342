@@ -1,10 +1,10 @@
 package TaskManager.data;
 
-class Process
+public class Process
 {
   String processName;
   String userName;
-  int cpu;
+  int CPU;
   int memory;
   String description;
 }

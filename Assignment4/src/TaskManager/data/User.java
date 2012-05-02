@@ -1,6 +1,6 @@
 package TaskManager.data;
 
-class User
+public class User
 {
   String username;
   //FIXME change to enum
