@@ -1,5 +1,5 @@
 
-<project name="customerSearch" default="compile" basedir=".">
+<project name="TaskManager" default="compile" basedir=".">
 
   <property name="build.compiler"              value="modern"/>
   <property name="src"                  value="src"/>
@@ -8,7 +8,7 @@
 
 
   <target name="compile"
-          depends="customerSearch"/>
+          depends="TaskManager"/>
 
   <target name="clean">
        <delete dir="${BUILD}"/>
@@ -25,9 +25,9 @@
   <!-- * means all files in the current directory -->
   <!-- for just java files use *.java -->
 
-  <target name="customerSearch" depends="prepare">
+  <target name="TaskManager" depends="prepare">
     <javac srcdir="${src}"
-           includes="customerSearch/**"
+           includes="TaskManager/**"
            excludes="**/package.html"
            destdir="${classes}"
            classpath="${classes}"
@@ -39,16 +39,16 @@
 
  <target name="jar">
         <mkdir dir="${BUILD}/jar"/>
-        <jar destfile="${BUILD}/jar/customerSearch.jar" basedir="${BUILD}/classes">
+        <jar destfile="${BUILD}/jar/TaskManager.jar" basedir="${BUILD}/classes">
             <manifest>
-                <attribute name="Main-Class" value="customerSearch.driver.Driver"/>
+                <attribute name="Main-Class" value="TaskManager.driver.Driver"/>
             </manifest>
         </jar>
     </target>
 
 
 <target name="run" depends="jar">
-        <java jar="${BUILD}/jar/CustomerSearch.jar"  fork="true">
+        <java jar="${BUILD}/jar/TaskManager.jar"  fork="true">
 	  <arg value="1"/>
 	 </java>
 

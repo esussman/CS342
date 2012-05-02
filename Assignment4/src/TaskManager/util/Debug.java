@@ -1,4 +1,4 @@
-package customerSearch.util;
+package Debug.util;
 
 public class Debug {
     public static int DEBUG_VALUE;
