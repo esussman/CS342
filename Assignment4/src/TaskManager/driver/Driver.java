@@ -7,6 +7,7 @@ import TaskManager.data.Performance;
 import TaskManager.tabs.PerformanceTab;
 import TaskManager.tabs.Tab;
 import java.util.Observer;
+
 public class Driver
 {
   public static void main(String[] args)
