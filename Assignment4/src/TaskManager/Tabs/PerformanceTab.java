@@ -12,5 +12,11 @@ public class PerformanceTab extends Tab
   public void update(Observable obs, Object x) {
       System.out.println("update(" + obs + "," + x + ");");
     }
+  public void changed(Object x)
+  {
+    this.setChanged();
+    notifyObservers(x);
+    clearChanged();
+  }
 }
 
