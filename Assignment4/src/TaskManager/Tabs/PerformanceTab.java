@@ -9,14 +9,14 @@ public class PerformanceTab extends Tab
   {
 
   }
-  public void update(observable obs, object x) {
+  public void update(Observable obs, Object x) {
       changed(x);
     }
-  public void changed(object x)
+  public void changed(Object x)
   {
-    this.setchanged();
-    notifyobservers(x);
-    clearchanged();
+    this.setChanged();
+    this.notifyObservers(x);
+    this.clearChanged();
   }
 }
 

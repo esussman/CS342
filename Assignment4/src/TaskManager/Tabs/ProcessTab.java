@@ -11,12 +11,12 @@ public class ProcessTab extends Tab
 
   }
   public void update(Observable obs, Object x) {
-      System.out.println("update(" + obs + "," + x + ");");
+    changed(x);
     }
   public void changed(Object x)
   {
     this.setChanged();
-    notifyObservers(x);
-    clearChanged();
+    this.notifyObservers(x);
+    this.clearChanged();
   }
 }

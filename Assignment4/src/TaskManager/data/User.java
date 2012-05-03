@@ -4,9 +4,9 @@ public class User
 {
   String username;
   //FIXME change to enum
-  int status;
+  String status;
 
-  public User(String username, int status)
+  public User(String username, String status)
   {
     this.username = username;
     this.status = status;
