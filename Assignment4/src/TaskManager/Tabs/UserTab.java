@@ -6,7 +6,17 @@ import java.util.Observer;
 
 public class UserTab extends Tab
 {
-  public void update(Observable obs, Object x) {
-      System.out.println("update(" + obs + "," + x + ");");
+  public UserTab()
+  {
+
+  }
+  public void update(observable obs, object x) {
+      changed(x);
     }
+  public void changed(object x)
+  {
+    this.setchanged();
+    notifyobservers(x);
+    clearchanged();
+  }
 }

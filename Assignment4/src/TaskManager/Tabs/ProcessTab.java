@@ -6,6 +6,10 @@ import java.util.Observer;
 
 public class ProcessTab extends Tab
 {
+  public ProcessTab()
+  {
+
+  }
   public void update(Observable obs, Object x) {
       System.out.println("update(" + obs + "," + x + ");");
     }
