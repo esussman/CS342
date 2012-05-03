@@ -2,6 +2,11 @@ package TaskManager.data;
 
 public class Performance
 {
+  int currentMemoryUsage;
+  int currentCpuUsage;
+  int totalPhysicalMemory;
+  int totalCached;
+
   public Performance(int currMemUsage, int currCpuUsage, int totalPhysicalMem, int totCached)
   {
     currentMemoryUsage = currMemUsage;
@@ -9,9 +14,11 @@ public class Performance
     totalPhysicalMemory = totalPhysicalMem;
     totalCached = totCached;
   }
-  int currentMemoryUsage;
-  int currentCpuUsage;
-  int totalPhysicalMemory;
-  int totalCached;
+  public String toString()
+  {
+    String ret = "Current Memory Usage " + currentMemoryUsage + " Current Cpu Usage " + currentCpuUsage + " Total Physical Memory " + totalPhysicalMemory + " Total Cached " + totalCached;
+    return ret;
+  }
+
 }
 
