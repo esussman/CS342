@@ -1,11 +1,15 @@
 package TaskManager.display;
 
 import TaskManager.display.Display;
+import java.util.Observable;
 
 public class StandardOut implements Display
 {
-  public void updateDisplay(String data)
+  public void updateDisplay(Object x)
   {
-    System.out.println(data);
+    System.out.println(x.toString());
+  }
+  public void update(Observable obs, Object x) {
+      updateDisplay(x);
   }
 }
