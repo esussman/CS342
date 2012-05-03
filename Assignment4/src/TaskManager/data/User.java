@@ -2,13 +2,18 @@ package TaskManager.data;
 
 public class User
 {
-  public User(String username, int Status)
-  {
-    this.username = username;
-    this.Status = Status;
-  }
   String username;
   //FIXME change to enum
-  int Status;
+  int status;
 
+  public User(String username, int status)
+  {
+    this.username = username;
+    this.status = status;
+  }
+  public String toString()
+  {
+    String ret = "Username " + username + " Status = " + status;
+    return ret;
+  }
 }
