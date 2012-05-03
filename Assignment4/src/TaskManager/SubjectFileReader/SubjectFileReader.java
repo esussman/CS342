@@ -22,6 +22,8 @@ public class SubjectFileReader extends Observable
   PerformanceTab performanceTab;
   ProcessTab processTab;
   UserTab userTab;
+  int totalMemory = 0, totalCache = 0;
+
 
   public SubjectFileReader(Display d)
   {
@@ -63,13 +65,18 @@ public class SubjectFileReader extends Observable
             }
             else if(data[0].equals("Performance"))
             {
-              Performance performance = new Performance(Integer.parseInt(data[1]), Integer.parseInt(data[2]), Integer.parseInt(data[3]), Integer.parseInt(data[4]));
+              Performance performance = new Performance(Integer.parseInt(data[1]), Integer.parseInt(data[2]), totalMemory, totalCache);
               System.out.println("sending info to Performance tab");
               this.addObserver(performanceTab);
               this.setChanged();
               this.notifyObservers(performance);
               this.clearChanged();
               this.deleteObserver(performanceTab);
+            }
+            else if(data[0].equals("Memory"))
+            {
+              totalMemory = Integer.parseInt(data[1]);
+              totalCache = Integer.parseInt(data[2]);
             }
           }
     }

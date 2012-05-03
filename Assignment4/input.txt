@@ -1,13 +1,13 @@
 Memory	1024	128
 User	Evan	active
 Processes	Photoshop	Renan	1	65	Image editing software
-Performance	256	50	42	56
+Performance	256	50
 User	Kenneth	inactive
 Processes	Firefox	Evan	2	300	Web browser
-Performance	300	76	45	24
+Performance	300	76
 Processes	Internet Explorer 6.0	Anderew	3	600	Horrible web browser
-Performance	256	50	24	22
-Performance	1024	99	46	31
+Performance	256	50
+Performance	1024	90
 User	Andrew	disconnected
 Processes	Gtalk	Kenneth	4	20	Chat program
 User	Renan	active
