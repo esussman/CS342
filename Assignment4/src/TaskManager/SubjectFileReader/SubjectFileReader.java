@@ -14,6 +14,7 @@ import java.util.Observer;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import TaskManager.util.Debug;
 
 
 public class SubjectFileReader extends Observable
@@ -45,8 +46,11 @@ public class SubjectFileReader extends Observable
             if(data[0].equals("User"))
             {
               User user = new User(data[1], data[2]);
-              System.out.println("sending info to user tab");
-              this.addObserver(userTab);
+			  if(Debug.DEBUG_VALUE >= 2)
+			  {
+				System.out.println("sending info to user tab");
+			  }
+			  this.addObserver(userTab);
               this.setChanged();
               this.notifyObservers(user);
               this.clearChanged();
@@ -56,7 +60,10 @@ public class SubjectFileReader extends Observable
             {
               Process process = new Process(data[1], data[2], Integer.parseInt(data[3]), Integer.parseInt(data[4]), data[5]);
 
-              System.out.println("sending info to Process tab");
+			   if(Debug.DEBUG_VALUE >= 2)
+			  {
+                System.out.println("sending info to Process tab");
+			  }
               this.addObserver(processTab);
               this.setChanged();
               this.notifyObservers(process);
@@ -66,7 +73,10 @@ public class SubjectFileReader extends Observable
             else if(data[0].equals("Performance"))
             {
               Performance performance = new Performance(Integer.parseInt(data[1]), Integer.parseInt(data[2]), totalMemory, totalCache);
-              System.out.println("sending info to Performance tab");
+			   if(Debug.DEBUG_VALUE >= 2)
+			  {
+                 System.out.println("sending info to Performance tab");
+			  }
               this.addObserver(performanceTab);
               this.setChanged();
               this.notifyObservers(performance);

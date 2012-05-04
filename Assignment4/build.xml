@@ -49,7 +49,7 @@
 
 <target name="run" depends="jar">
         <java jar="${BUILD}/jar/TaskManager.jar"  fork="true">
-	  <arg value="1"/>
+	  <arg value="2"/>
 	 </java>
 
     </target>

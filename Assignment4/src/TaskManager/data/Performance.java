@@ -1,5 +1,6 @@
 package TaskManager.data;
 
+
 public class Performance
 {
   int currentMemoryUsage;
