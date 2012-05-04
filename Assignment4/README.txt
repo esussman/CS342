@@ -1,8 +1,8 @@
 CS542 Design Patterns
 Spring 2011
-PROJECT 3 README FILE
+PROJECT 4 README FILE
 
-Due Date: Monday, April 16th, 2012
+Due Date: Thursday, May 3rd, 2012
 Submission Date: Monday, April 16th, 2012
 Grace Period Used This Project: 0 Days
 Grace Period Remaining: ??? Days
@@ -12,13 +12,14 @@ e-mail(s): rdelval1@binghamton.edu, esussma1@binghamton.edu
 
 PURPOSE:
 
-The purpose of this program is correctly identify and 
-implement the design patterns needed to create
-a software troubleshooting program for hard drives.
+The purpose of this assignment was to create 
+a pseudo task manager. The events are read from
+an input file and the pertinent tabs are notified
+that new information is available that pertains to them.
 
 PERCENT COMPLETE:
 
-I believe I have completed 100% of this project.
+We believe we have completed 100% of this project.
 
 PARTS THAT ARE NOT COMPLETE:
 
@@ -29,23 +30,17 @@ None.
 
 FILES:
 
-	SearchStrategy.java, contains interface for all search strategies.
-	ExactMatchStrategy.java, contains an Exact Match search algorithm. Extends SearchStrategy.
-	NativeMatchStrategy.java, contains a Native Match search algorithm. Extends SearchStrategy.
-	SemanticMatchStrategy.java, contains a Semantic Match search algorithm. Extends SearchStrategy.
-	Driver.java, contains driver code.
-	SeaGateDrive[1-3].java, contain implementations of a V1 hard drive model.
-	SeaGateDrive[4-6].java, contain implementations of a V2 hard drive model.
-	SeaGateDrive[7-9].java, contain implementations of a V3 hard drive model.
-	SeaGateDrive[10-12].java, contain implementations of a V4 hard drive model.
-	ProductVistor.java, contains interface for creating product visitors.
-	CompleteSearchVisitor.java, contains implementation of a visitor for all drives with all 3 searches. Implements ProductVisitor.java 
-	Debug.java, defines debug number.
-	FileEnums.java, defines names of text files that describe the hard drives.
-	products[1-12].txt contain product descriptions.
-	README.txt, the file that you're reading right now
-	synonyms.txt, file that contains synonyms
-	userInputs.txt,file that emulates multiple input made by a user
+	build.xml - File used to build the project through ANT.
+	README.txt - The file that you are currently reading.
+	Performance.java - Creates a performance instance to be passed to the performance tab.
+	Process.java - Creates a process instance to be passed to the performance tab.
+	User.java - Creates a user instance to be passed to the user tab.
+	Display.java - Interface which defines requirements for a display.
+	StandardOut.java - Implementation of standard out display.
+	Driver.java - Code for execution. Creates and runs the task manager.
+	SubjectFileReader.java - Observable instance which parses input files and notifies specific observer tab there is an update.
+	
+	
 
 SAMPLE OUTPUT:
 
