@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassName>genericEventProcessor.util.VizDetails</ClassName>
+<arg0>genericEventProcessor.util.VizDetails</arg0>
+<arg1>java.lang.Integer</arg1>
+<arg2>java.lang.String</arg2>
+<CallingMethod>writeViz</CallingMethod>
+<DeclaringClass>genericEventProcessor.server.viz.RemoteViz</DeclaringClass>
+<Method3>getData1</Method3>
+<data3>
+	<ReturnType>java.lang.Integer</ReturnType>
+	<name>Data1</name
+	<value>1000</value>
+</data3>
+<Method4>getData2</Method4>
+<data4>
+	<ReturnType>java.lang.Integer</ReturnType>
+	<name>Data2</name
+	<value>192</value>
+</data4>
+<Method11>getClass</Method11>
+<data11>
+	<ReturnType>java.lang.Class</ReturnType>
+	<name>Class</name
+	<value>class genericEventProcessor.util.VizDetails</value>
+</data11>
